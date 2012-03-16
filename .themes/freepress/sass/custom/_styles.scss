@@ -1,2 +1,19 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+
+table, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ddd;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline
+}
+
+th, td {
+  padding: 0 0.333em;
+}
+
+.post-meta {
+  font-style: italic;
+}
