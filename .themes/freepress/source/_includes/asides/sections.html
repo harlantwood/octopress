@@ -1,13 +1,13 @@
 {% if site.pages.size > 0 %}
   <section>
-    <h1>Pages</h1>
+    <h1>Contents</h1>
     <ul id="pages">
       {% for page in site.pages %}
         {% if page.layout == 'page' %}
           {% if page.status != 'unlisted' %}
             {% if page.title %}
               <li class="post">
-                <a href="{{ root_url }}{{ page.url }}">{{ page.title }}</a>
+                <a href="#{{ page.title | replace: ' ', '-' }}">{{ page.title }}</a>
               </li>
             {% endif %}
           {% endif %}
