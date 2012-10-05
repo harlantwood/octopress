@@ -1,0 +1,3 @@
+{% comment %} if max_rank is set in _config.yml, use that; otherwise set to default value {% endcomment %}
+
+{% capture max_rank %}{% if site.max_rank %}{{ site.max_rank }}{% else %}{{ 10 }}{% endif %}{% endcapture %}
