@@ -4,6 +4,16 @@ title: Best Practices
 contributors: Harlan T Wood
 ---
 
+{% for content_page in site.html_pages %}
+  {% if content_page.title == 'Site Introduction' %}
+<article>
+  <div class="entry-content">
+    {{ content_page.content }}
+  </div>
+</article>
+  {% endif %}
+{% endfor %}
+
 {% include set_max_rank %}
 {% for rank in (1..max_rank) %}
   {% for content_page in site.html_pages %}
