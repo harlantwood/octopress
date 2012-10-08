@@ -1,28 +1,64 @@
-## What is Octopress?
+# What is Octopress?
+Octopress gives developers a well designed starting point for a Jekyll blog. It's easy to configure and easy to deploy. Sweet huh?
 
-Octopress is [Jekyll](https://github.com/mojombo/jekyll) blogging at its finest.
+#### Octopress comes with
+1. A nice, easy to configure theme that focuses on readability.
+2. Built in support for Twitter, Delicious, Disqus Comments, Google Analytics, and Custom Search.
+3. Rake tasks that make development fast, and deploying easy.
 
-1. **Octopress sports a clean responsive theme** written in semantic HTML5, focused on readability and friendliness toward mobile devices.
-2. **Code blogging is easy and beautiful.** Embed code (with [Solarized](http://ethanschoonover.com/solarized) styling) in your posts from gists, jsFiddle or from your filesystem.
-3. **Third party integration is simple** with built-in support for Twitter, Pinboard, Delicious, GitHub Repositories, Disqus Comments and Google Analytics.
-4. **It's easy to use.** A collection of rake tasks simplifies development and makes deploying a cinch.
-5. **Ships with great plug-ins** some original and others from the Jekyll community &mdash; tested and improved.
+## Why?
+1. Building a Jekyll blog from scratch is a lot of work.
+2. Jekyll doesn't have default layouts or themes.
+3. Most developers don't want to do design.
 
+## Octopress is made of
+- [Jekyll](http://github.com/henrik/jekyll) a blog aware static site generator (Henrik's fork adds [HAML](http://haml-lang.com) support)
+- [Compass](http://compass-style.org) an awesome [SASS](http://sass-lang.com) framework
+- [FSSM](http://github.com/ttilley/fssm/tree/master) + a rake task, automatically regenerates the blog as you work
+- [Serve](http://github.com/jlong/serve) for live previews of the site while in development
+- [Rsync](http://samba.anu.edu.au/rsync/) for easy deployment
 
-## Documentation
+## Setup
+Setup is really simple.
+  
+1. Download Octopress: <code>git clone git://github.com/imathis/octopress.git</code>
+2. Install dependencies (requires the bundler gem): <code>bundle install</code>
+3. Run <code>rake preview</code> to build the site and preview it in a local webserver.
 
-Check out [Octopress.org](http://octopress.org/docs) for guides and documentation.
+You'll want to change some settings, so check out the wiki for [Setup & Configurations](http://wiki.github.com/imathis/octopress/configuration).
 
+#### Optional:
+- Install Pygments (Python syntax highlighter), if you wish to enable _Syntax Highlighting_.  Download from [pygments.org](http://pygments.org), or <code>sudo aptitude install python-pigments</code> for Debian/Ubuntu users.
 
-## Contributing
+## Usage
+Octopress is almost like a front-end for Jekyll. It provides some really handy rake tasks and automation to make blogging as simple as possible. With Octopress you can:
 
-We love to see people contributing to Octopress, whether it's a bug report, feature suggestion or a pull request. At the moment, we try to keep the core slick and lean, focusing on basic blogging needs, so some of your suggestions might not find their way into Octopress. For those ideas, we started a [list of 3rd party plug-ins](https://github.com/imathis/octopress/wiki/3rd-party-plug-ins), where you can link your own Octopress plug-in repositories. For the future, we're thinking about ways to easier add them them into our main releases.
+- Preview the site locally with the power of Serve.
+- Automatically regenerate your blog while you work.
+- Generate and deploy with a single command.
 
+See the wiki to learn more about [Usage](http://wiki.github.com/imathis/octopress/usage).
+
+## Third Party Integration
+With search, comments, and analytics, you have no need for a database. This is what makes a statically generated blog possible.
+
+- Twitter
+- Disqus Comments
+- Google Custom Search
+- Google Analytics
+- Delicious Bookmarks
+
+If you already have an account with these services, you can get set up within seconds. Check out the wiki for [Third Party Configuration](http://wiki.github.com/imathis/octopress/third-party-integration) details, and to learn how to setup or remove these services.
+
+## Octopress Style
+- Stylesheets use [SASS](http://sass-lang.com) and [Compass](http://compass-style.org)
+- They're broken up into Layout, Typography, Theme (colors), and Partials
+- Checkout [the wiki](http://wiki.github.com/imathis/octopress/style-customization) for help with customization.
 
 ## License
 (The MIT License)
 
-Copyright © 2009-2011 Brandon Mathis
+Copyright © 2009 Brandon Mathis
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the ‘Software’), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -30,7 +66,6 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-
 #### If you want to be awesome.
 - Proudly display the 'Powered by Octopress' credit in the footer.
-- Add your site to the Wiki so we can watch the community grow.
+- Add your site to the wiki so we can watch the community grow.
